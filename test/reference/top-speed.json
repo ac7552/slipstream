@@ -1,0 +1,21 @@
+{
+  "what": "Steady top speed flat out in a fixed gear, on flat asphalt, no steering",
+  "formula": "T(rpm) * ratio * efficiency / R = 1/2 rho CdA v^2 + c_rr (m g + 1/2 rho ClA v^2); rpm from the rear wheel speed v (1 + slip) / R",
+  "tolerance_kmh": 0.3,
+  "rows": [
+    {
+      "gear": 7,
+      "v_m_s": 96.415,
+      "v_kmh": 347.09,
+      "rpm": 14485.6,
+      "rear_slip": 0.01143
+    },
+    {
+      "gear": 8,
+      "v_m_s": 97.7674,
+      "v_kmh": 351.96,
+      "rpm": 12198.5,
+      "rear_slip": 0.01156
+    }
+  ]
+}

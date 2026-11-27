@@ -1,0 +1,46 @@
+{
+  "what": "Steady yaw rate for a small fixed steering angle at four speeds, holding speed",
+  "formula": "r = v delta / (L + K v^2 + (D v / L) (1/Cf + 1/Cr)); K = (m / L) (b / Cf - a / Cr); D = k_diff t_rear^2 / (2 R^2); C = 2 B C D(load) per axle",
+  "constants": {
+    "L_m": 3.6,
+    "a_m": 1.962,
+    "b_m": 1.638,
+    "m_kg": 798,
+    "D_N_m_s": 370.756
+  },
+  "tolerance_fraction": 0.005,
+  "rows": [
+    {
+      "v_m_s": 20,
+      "steer_rad": 0.009,
+      "Cf_N_rad": 162494.6,
+      "Cr_N_rad": 196151.4,
+      "K_rad_s2_m": 0.0000172586,
+      "yaw_rate_rad_s": 0.0495857
+    },
+    {
+      "v_m_s": 40,
+      "steer_rad": 0.00225,
+      "Cf_N_rad": 211664.1,
+      "Cr_N_rad": 262528.9,
+      "K_rad_s2_m": 0.0000587891,
+      "yaw_rate_rad_s": 0.0241338
+    },
+    {
+      "v_m_s": 60,
+      "steer_rad": 0.001,
+      "Cf_N_rad": 290802.8,
+      "Cr_N_rad": 367798.5,
+      "K_rad_s2_m": 0.0000661099,
+      "yaw_rate_rad_s": 0.0154797
+    },
+    {
+      "v_m_s": 80,
+      "steer_rad": 0.0005625,
+      "Cf_N_rad": 395695.2,
+      "Cr_N_rad": 503921,
+      "K_rad_s2_m": 0.0000545482,
+      "yaw_rate_rad_s": 0.0112887
+    }
+  ]
+}

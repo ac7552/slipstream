@@ -1,0 +1,24 @@
+{
+  "what": "Recorded from this engine: a standing start with traction control, braking from 300 to 100 km/h with ABS, the planned lap, and a flying lap by the built-in driver",
+  "tolerance_fraction": 0.01,
+  "launch": [
+    {
+      "kmh": 100,
+      "time_s": 2.519
+    },
+    {
+      "kmh": 200,
+      "time_s": 4.823
+    },
+    {
+      "kmh": 300,
+      "time_s": 9.019
+    }
+  ],
+  "braking_300_100": {
+    "distance_m": 87.68,
+    "time_s": 1.743
+  },
+  "planned_lap_s": 55.396,
+  "driven_lap_s": 57.586
+}

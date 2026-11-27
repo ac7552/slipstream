@@ -1,0 +1,13 @@
+{
+  "name": "slipstream",
+  "private": true,
+  "type": "module",
+  "description": "A single-seater racing car simulator, driven from the cockpit or from behind: a 1 kHz vehicle engine with Magic Formula tyres, held to reference tables. No AI.",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "eval": "node tools/eval.mjs",
+    "baseline": "node tools/baseline.mjs",
+    "reference": "node tools/make_reference.mjs",
+    "serve": "python3 -m http.server 8794"
+  }
+}

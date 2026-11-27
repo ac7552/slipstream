@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slipstream</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.min.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="view"></canvas>
+
+  <div id="hud" hidden>
+    <section id="timing">
+      <div class="row big"><span id="lapnum">Lap 1</span><b id="laptime">0:00.000</b></div>
+      <div class="row"><span>Delta</span><b id="delta">-</b></div>
+      <div class="row"><span>Last</span><b id="last">-</b></div>
+      <div class="row"><span>Best</span><b id="best">-</b></div>
+      <div id="sectors"><i></i><i></i><i></i></div>
+    </section>
+
+    <canvas id="map" width="220" height="220"></canvas>
+
+    <div id="lights"><i></i><i></i><i></i><i></i><i></i></div>
+    <div id="message"></div>
+
+    <section id="dash">
+      <div id="leds"></div>
+      <div id="readout">
+        <div id="pedals"><i id="brakebar"></i><i id="throttlebar"></i></div>
+        <div class="speed"><b id="speed">0</b><span>km/h</span></div>
+        <div class="gear"><b id="gear">1</b><span id="rpm">4,000 rpm</span></div>
+        <canvas id="gmeter" width="88" height="88"></canvas>
+        <div id="tyres"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div id="chips">
+        <span id="chip-cam">Cockpit</span><span id="chip-tc" class="on">TC</span><span id="chip-abs" class="on">ABS</span><span id="chip-box" class="on">Auto</span><span id="chip-ap">Autopilot</span>
+      </div>
+    </section>
+  </div>
+
+  <div id="menu">
+    <div class="card">
+      <h1>Slipstream</h1>
+      <p class="lede">A made-up modern single-seater on a made-up 4.3 km circuit. 798 kg, about 750 kW, downforce that pulls it into the road harder the faster it goes. Drive it from the cockpit or from behind. Every number on the screen comes from a vehicle engine stepped 1,000 times a second.</p>
+      <div class="buttons">
+        <button id="go" class="primary">Drive</button>
+        <button id="watch">Watch a lap</button>
+      </div>
+      <table class="keys">
+        <tr><td>Throttle, brake, steer</td><td><kbd>W</kbd><kbd>S</kbd><kbd>A</kbd><kbd>D</kbd> or the arrows, or a gamepad</td></tr>
+        <tr><td>Gear up, down</td><td><kbd>E</kbd><kbd>Q</kbd> (shifting by hand turns off the automatic box; <kbd>G</kbd> turns it back on)</td></tr>
+        <tr><td>Camera</td><td><kbd>C</kbd> cockpit, onboard, chase, trackside</td></tr>
+        <tr><td>Aids</td><td><kbd>T</kbd> traction control, <kbd>B</kbd> ABS</td></tr>
+        <tr><td>Back on track</td><td><kbd>R</kbd></td></tr>
+        <tr><td>Let it drive</td><td><kbd>P</kbd> autopilot</td></tr>
+        <tr><td>Racing line, sound, pause</td><td><kbd>L</kbd><kbd>M</kbd><kbd>Esc</kbd></td></tr>
+      </table>
+      <p class="hint">Real cars of this class race without traction control or ABS. Both start on here because a keyboard is only on or off; switch them off when you have the feel of it, or use a gamepad.</p>
+    </div>
+  </div>
+
+  <div id="paused" hidden><div class="card"><h2>Paused</h2><p>Press <kbd>Esc</kbd> to carry on.</p></div></div>
+  <div id="loading">Laying the asphalt</div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
